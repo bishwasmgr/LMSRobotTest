@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on darwin)" generated="20231008 09:31:16.779" rpa="false" schemaversion="4">
+<suite id="s1" name="Issuedbook" source="/Users/bishwasthapamagar/project/Learn/Test_Project/TestSuites/View_Issued_book/Issuedbook.robot">
+<test id="s1-t1" name="Open Website and Log In" line="13">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231008 09:31:16.863" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/stafflogin/'.</msg>
+<status status="PASS" starttime="20231008 09:31:16.863" endtime="20231008 09:31:18.901"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginuname</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231008 09:31:18.902" level="INFO">Typing text 'testuser' into text field 'id=loginuname'.</msg>
+<status status="PASS" starttime="20231008 09:31:18.901" endtime="20231008 09:31:19.024"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231008 09:31:19.025" level="INFO">Typing text 'secret123' into text field 'id=loginpassword'.</msg>
+<status status="PASS" starttime="20231008 09:31:19.024" endtime="20231008 09:31:19.066"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='submit' and @value='Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231008 09:31:19.066" level="INFO">Clicking element 'xpath=//input[@type='submit' and @value='Login']'.</msg>
+<status status="PASS" starttime="20231008 09:31:19.066" endtime="20231008 09:31:19.202"/>
+</kw>
+<status status="PASS" starttime="20231008 09:31:16.863" endtime="20231008 09:31:19.203"/>
+</test>
+<test id="s1-t2" name="Check Table Headers" line="19">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>View Issued Book</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231008 09:31:19.203" level="INFO">Clicking link 'View Issued Book'.</msg>
+<status status="PASS" starttime="20231008 09:31:19.203" endtime="20231008 09:31:19.556"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231008 09:31:19.556" endtime="20231008 09:31:19.627"/>
+</kw>
+<status status="PASS" starttime="20231008 09:31:19.203" endtime="20231008 09:31:19.627"/>
+</test>
+<status status="PASS" starttime="20231008 09:31:16.780" endtime="20231008 09:31:19.627"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Issuedbook">Issuedbook</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on darwin)" generated="20231007 20:38:03.535" rpa="false" schemaversion="4">
+<suite id="s1" name="AddBooks" source="/Users/bishwasthapamagar/project/Learn/Test_Project/TestSuites/Add_Book/AddBooks.robot">
+<test id="s1-t1" name="Open Website" line="18">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231007 20:38:03.597" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:8000/stafflogin/'.</msg>
+<status status="PASS" starttime="20231007 20:38:03.597" endtime="20231007 20:38:05.357"/>
+</kw>
+<status status="PASS" starttime="20231007 20:38:03.597" endtime="20231007 20:38:05.357"/>
+</test>
+<test id="s1-t2" name="Login to your Account" line="21">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginuname</arg>
+<arg>testuser</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:38:05.358" level="INFO">Typing text 'testuser' into text field 'id=loginuname'.</msg>
+<status status="PASS" starttime="20231007 20:38:05.358" endtime="20231007 20:38:05.444"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>secret123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:38:05.444" level="INFO">Typing text 'secret123' into text field 'id=loginpassword'.</msg>
+<status status="PASS" starttime="20231007 20:38:05.444" endtime="20231007 20:38:05.486"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='submit' and @value='Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 20:38:05.486" level="INFO">Clicking element 'xpath=//input[@type='submit' and @value='Login']'.</msg>
+<status status="PASS" starttime="20231007 20:38:05.486" endtime="20231007 20:38:05.900"/>
+</kw>
+<status status="PASS" starttime="20231007 20:38:05.357" endtime="20231007 20:38:05.901"/>
+</test>
+<test id="s1-t3" name="Add Books" line="26">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Add Book</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231007 20:38:05.901" level="INFO">Clicking link 'Add Book'.</msg>
+<status status="PASS" starttime="20231007 20:38:05.901" endtime="20231007 20:38:05.954"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=bookid</arg>
+<arg>${BookID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:38:05.955" level="INFO">Typing text 'SampleBookID' into text field 'id=bookid'.</msg>
+<status status="PASS" starttime="20231007 20:38:05.954" endtime="20231007 20:38:06.006"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=bookname</arg>
+<arg>${BookName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:38:06.006" level="INFO">Typing text 'Sample Book' into text field 'id=bookname'.</msg>
+<status status="PASS" starttime="20231007 20:38:06.006" endtime="20231007 20:38:06.041"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=subject</arg>
+<arg>${Subject}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:38:06.041" level="INFO">Typing text 'Sample Subject' into text field 'id=subject'.</msg>
+<status status="PASS" starttime="20231007 20:38:06.041" endtime="20231007 20:38:06.076"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=category</arg>
+<arg>${Status}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:38:06.076" level="INFO">Typing text 'Issued' into text field 'id=category'.</msg>
+<status status="PASS" starttime="20231007 20:38:06.076" endtime="20231007 20:38:06.110"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231007 20:38:06.110" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231007 20:38:06.110" endtime="20231007 20:38:06.142"/>
+</kw>
+<status status="PASS" starttime="20231007 20:38:05.901" endtime="20231007 20:38:06.142"/>
+</test>
+<test id="s1-t4" name="Open Dashboard and Check Book Details" line="35">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Dashboard</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231007 20:38:06.142" level="INFO">Clicking link 'Dashboard'.</msg>
+<status status="PASS" starttime="20231007 20:38:06.142" endtime="20231007 20:38:06.192"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${BookID}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231007 20:38:06.203" level="INFO">Current page contains text 'SampleBookID'.</msg>
+<status status="PASS" starttime="20231007 20:38:06.192" endtime="20231007 20:38:06.203"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${BookName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231007 20:38:06.210" level="INFO">Current page contains text 'Sample Book'.</msg>
+<status status="PASS" starttime="20231007 20:38:06.203" endtime="20231007 20:38:06.210"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Subject}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231007 20:38:06.217" level="INFO">Current page contains text 'Sample Subject'.</msg>
+<status status="PASS" starttime="20231007 20:38:06.210" endtime="20231007 20:38:06.217"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Status}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231007 20:38:06.224" level="INFO">Current page contains text 'Issued'.</msg>
+<status status="PASS" starttime="20231007 20:38:06.217" endtime="20231007 20:38:06.224"/>
+</kw>
+<status status="PASS" starttime="20231007 20:38:06.142" endtime="20231007 20:38:06.224"/>
+</test>
+<status status="PASS" starttime="20231007 20:38:03.535" endtime="20231007 20:38:06.225"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="AddBooks">AddBooks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

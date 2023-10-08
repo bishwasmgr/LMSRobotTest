@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on darwin)" generated="20231007 20:20:27.980" rpa="false" schemaversion="4">
+<suite id="s1" name="UserLogin" source="/Users/bishwasthapamagar/project/Learn/Test_Project/TestSuites/Staff_login/UserLogin.robot">
+<test id="s1-t1" name="Log In Staff Member With Invalid Username" line="6">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:8000/stafflogin/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231007 20:20:28.085" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/stafflogin/'.</msg>
+<status status="PASS" starttime="20231007 20:20:28.085" endtime="20231007 20:20:29.816"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231007 20:20:29.816" endtime="20231007 20:20:30.274"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginuname</arg>
+<arg>InvalidUsername</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:20:30.276" level="INFO">Typing text 'InvalidUsername' into text field 'id=loginuname'.</msg>
+<status status="PASS" starttime="20231007 20:20:30.275" endtime="20231007 20:20:30.382"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>secret123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:20:30.382" level="INFO">Typing text 'secret123' into text field 'id=loginpassword'.</msg>
+<status status="PASS" starttime="20231007 20:20:30.382" endtime="20231007 20:20:30.424"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='submit' and @value='Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 20:20:30.424" level="INFO">Clicking element 'xpath=//input[@type='submit' and @value='Login']'.</msg>
+<status status="PASS" starttime="20231007 20:20:30.424" endtime="20231007 20:20:30.607"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231007 20:20:30.607" endtime="20231007 20:20:30.674"/>
+</kw>
+<status status="PASS" starttime="20231007 20:20:28.085" endtime="20231007 20:20:30.675"/>
+</test>
+<test id="s1-t2" name="Log In Staff Member With Invalid Password" line="20">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:8000/stafflogin/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231007 20:20:30.675" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/stafflogin/'.</msg>
+<status status="PASS" starttime="20231007 20:20:30.675" endtime="20231007 20:20:32.288"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231007 20:20:32.289" endtime="20231007 20:20:32.398"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginuname</arg>
+<arg>testuser</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:20:32.398" level="INFO">Typing text 'testuser' into text field 'id=loginuname'.</msg>
+<status status="PASS" starttime="20231007 20:20:32.398" endtime="20231007 20:20:32.486"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>InvalidPassword</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:20:32.486" level="INFO">Typing text 'InvalidPassword' into text field 'id=loginpassword'.</msg>
+<status status="PASS" starttime="20231007 20:20:32.486" endtime="20231007 20:20:32.526"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='submit' and @value='Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 20:20:32.526" level="INFO">Clicking element 'xpath=//input[@type='submit' and @value='Login']'.</msg>
+<status status="PASS" starttime="20231007 20:20:32.526" endtime="20231007 20:20:32.646"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231007 20:20:32.646" endtime="20231007 20:20:32.715"/>
+</kw>
+<status status="PASS" starttime="20231007 20:20:30.675" endtime="20231007 20:20:32.715"/>
+</test>
+<test id="s1-t3" name="Log In Staff Member With Valid Credentials" line="34">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:8000/stafflogin/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231007 20:20:32.715" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/stafflogin/'.</msg>
+<status status="PASS" starttime="20231007 20:20:32.715" endtime="20231007 20:20:34.337"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231007 20:20:34.338" endtime="20231007 20:20:34.801"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginuname</arg>
+<arg>testuser</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:20:34.801" level="INFO">Typing text 'testuser' into text field 'id=loginuname'.</msg>
+<status status="PASS" starttime="20231007 20:20:34.801" endtime="20231007 20:20:34.907"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>secret123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:20:34.908" level="INFO">Typing text 'secret123' into text field 'id=loginpassword'.</msg>
+<status status="PASS" starttime="20231007 20:20:34.908" endtime="20231007 20:20:34.947"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='submit' and @value='Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 20:20:34.948" level="INFO">Clicking element 'xpath=//input[@type='submit' and @value='Login']'.</msg>
+<status status="PASS" starttime="20231007 20:20:34.948" endtime="20231007 20:20:35.074"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231007 20:20:35.075" endtime="20231007 20:20:35.140"/>
+</kw>
+<status status="PASS" starttime="20231007 20:20:32.715" endtime="20231007 20:20:35.140"/>
+</test>
+<test id="s1-t4" name="Log In Staff Member With Empty Credentials" line="48">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:8000/stafflogin/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231007 20:20:35.141" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/stafflogin/'.</msg>
+<status status="PASS" starttime="20231007 20:20:35.140" endtime="20231007 20:20:36.792"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231007 20:20:36.792" endtime="20231007 20:20:37.245"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginuname</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:20:37.246" level="INFO">Typing text '' into text field 'id=loginuname'.</msg>
+<status status="PASS" starttime="20231007 20:20:37.245" endtime="20231007 20:20:37.296"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:20:37.297" level="INFO">Typing text '' into text field 'id=loginpassword'.</msg>
+<status status="PASS" starttime="20231007 20:20:37.296" endtime="20231007 20:20:37.326"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='submit' and @value='Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 20:20:37.327" level="INFO">Clicking element 'xpath=//input[@type='submit' and @value='Login']'.</msg>
+<status status="PASS" starttime="20231007 20:20:37.327" endtime="20231007 20:20:37.362"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231007 20:20:37.362" endtime="20231007 20:20:37.426"/>
+</kw>
+<status status="PASS" starttime="20231007 20:20:35.140" endtime="20231007 20:20:37.426"/>
+</test>
+<status status="PASS" starttime="20231007 20:20:27.980" endtime="20231007 20:20:37.426"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="UserLogin">UserLogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on darwin)" generated="20231007 20:34:56.759" rpa="false" schemaversion="4">
+<suite id="s1" name="Addstudent" source="/Users/bishwasthapamagar/project/Learn/Test_Project/TestSuites/Add_Student/addstudent.robot">
+<test id="s1-t1" name="Test Adding a Valid Student" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231007 20:34:56.825" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/stafflogin/'.</msg>
+<status status="PASS" starttime="20231007 20:34:56.825" endtime="20231007 20:34:58.542"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginuname</arg>
+<arg>testuser</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:34:58.543" level="INFO">Typing text 'testuser' into text field 'id=loginuname'.</msg>
+<status status="PASS" starttime="20231007 20:34:58.542" endtime="20231007 20:34:58.647"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>secret123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:34:58.648" level="INFO">Typing text 'secret123' into text field 'id=loginpassword'.</msg>
+<status status="PASS" starttime="20231007 20:34:58.647" endtime="20231007 20:34:58.687"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='submit' and @value='Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 20:34:58.687" level="INFO">Clicking element 'xpath=//input[@type='submit' and @value='Login']'.</msg>
+<status status="PASS" starttime="20231007 20:34:58.687" endtime="20231007 20:34:59.089"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Add Student</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231007 20:34:59.090" level="INFO">Clicking link 'Add Student'.</msg>
+<status status="PASS" starttime="20231007 20:34:59.089" endtime="20231007 20:34:59.143"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=sname</arg>
+<arg>New Student</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:34:59.143" level="INFO">Typing text 'New Student' into text field 'id=sname'.</msg>
+<status status="PASS" starttime="20231007 20:34:59.143" endtime="20231007 20:34:59.191"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=studentid</arg>
+<arg>S67890</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:34:59.192" level="INFO">Typing text 'S67890' into text field 'id=studentid'.</msg>
+<status status="PASS" starttime="20231007 20:34:59.192" endtime="20231007 20:34:59.226"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231007 20:34:59.226" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231007 20:34:59.226" endtime="20231007 20:34:59.270"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231007 20:34:59.270" endtime="20231007 20:34:59.337"/>
+</kw>
+<doc>Test adding a student with valid details</doc>
+<tag>AddStudent</tag>
+<status status="PASS" starttime="20231007 20:34:56.825" endtime="20231007 20:34:59.337"/>
+</test>
+<test id="s1-t2" name="Test Adding a Student with Existing ID" line="25">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231007 20:34:59.338" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/stafflogin/'.</msg>
+<status status="PASS" starttime="20231007 20:34:59.338" endtime="20231007 20:35:00.961"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginuname</arg>
+<arg>testuser</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:35:00.961" level="INFO">Typing text 'testuser' into text field 'id=loginuname'.</msg>
+<status status="PASS" starttime="20231007 20:35:00.961" endtime="20231007 20:35:01.062"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>secret123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:35:01.063" level="INFO">Typing text 'secret123' into text field 'id=loginpassword'.</msg>
+<status status="PASS" starttime="20231007 20:35:01.062" endtime="20231007 20:35:01.102"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='submit' and @value='Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 20:35:01.102" level="INFO">Clicking element 'xpath=//input[@type='submit' and @value='Login']'.</msg>
+<status status="PASS" starttime="20231007 20:35:01.102" endtime="20231007 20:35:01.576"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Add Student</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231007 20:35:01.576" level="INFO">Clicking link 'Add Student'.</msg>
+<status status="PASS" starttime="20231007 20:35:01.576" endtime="20231007 20:35:01.626"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=sname</arg>
+<arg>Duplicate Student</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:35:01.626" level="INFO">Typing text 'Duplicate Student' into text field 'id=sname'.</msg>
+<status status="PASS" starttime="20231007 20:35:01.626" endtime="20231007 20:35:01.665"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=studentid</arg>
+<arg>${StudentID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:35:01.665" level="INFO">Typing text 'S12345' into text field 'id=studentid'.</msg>
+<status status="PASS" starttime="20231007 20:35:01.665" endtime="20231007 20:35:01.700"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231007 20:35:01.700" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231007 20:35:01.700" endtime="20231007 20:35:01.742"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231007 20:35:01.742" endtime="20231007 20:35:01.810"/>
+</kw>
+<doc>Test adding a student with an existing ID</doc>
+<tag>AddStudent</tag>
+<status status="PASS" starttime="20231007 20:34:59.337" endtime="20231007 20:35:01.810"/>
+</test>
+<test id="s1-t3" name="TTest Adding a Student with Empty Name" line="39">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231007 20:35:01.811" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/stafflogin/'.</msg>
+<status status="PASS" starttime="20231007 20:35:01.811" endtime="20231007 20:35:03.421"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginuname</arg>
+<arg>testuser</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:35:03.422" level="INFO">Typing text 'testuser' into text field 'id=loginuname'.</msg>
+<status status="PASS" starttime="20231007 20:35:03.421" endtime="20231007 20:35:03.521"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginpassword</arg>
+<arg>secret123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:35:03.521" level="INFO">Typing text 'secret123' into text field 'id=loginpassword'.</msg>
+<status status="PASS" starttime="20231007 20:35:03.521" endtime="20231007 20:35:03.560"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='submit' and @value='Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231007 20:35:03.561" level="INFO">Clicking element 'xpath=//input[@type='submit' and @value='Login']'.</msg>
+<status status="PASS" starttime="20231007 20:35:03.560" endtime="20231007 20:35:03.985"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Add Student</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231007 20:35:03.985" level="INFO">Clicking link 'Add Student'.</msg>
+<status status="PASS" starttime="20231007 20:35:03.985" endtime="20231007 20:35:04.038"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=studentid</arg>
+<arg>Empty Name Student</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231007 20:35:04.038" level="INFO">Typing text 'Empty Name Student' into text field 'id=studentid'.</msg>
+<status status="PASS" starttime="20231007 20:35:04.038" endtime="20231007 20:35:04.090"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231007 20:35:04.091" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231007 20:35:04.090" endtime="20231007 20:35:04.131"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231007 20:35:04.131" endtime="20231007 20:35:04.201"/>
+</kw>
+<doc>Test adding a student with an empty name</doc>
+<tag>AddStudent</tag>
+<status status="PASS" starttime="20231007 20:35:01.811" endtime="20231007 20:35:04.201"/>
+</test>
+<status status="PASS" starttime="20231007 20:34:56.760" endtime="20231007 20:35:04.202"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">AddStudent</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Addstudent">Addstudent</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

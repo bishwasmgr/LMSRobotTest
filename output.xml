@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on darwin)" generated="20231008 09:35:27.441" rpa="false" schemaversion="4">
+<suite id="s1" name="Check server" source="/Users/bishwasthapamagar/project/Learn/Test_Project/TestSuites/Check_server.robot">
+<test id="s1-t1" name="Open Website and VerifyNavBarLinks" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231008 09:35:27.529" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000'.</msg>
+<status status="PASS" starttime="20231008 09:35:27.529" endtime="20231008 09:35:29.626"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>link=Home</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231008 09:35:29.626" endtime="20231008 09:35:29.642"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>link=Staff</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231008 09:35:29.642" endtime="20231008 09:35:29.648"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>link=About Us</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231008 09:35:29.648" endtime="20231008 09:35:29.655"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>link=Contact Us</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231008 09:35:29.655" endtime="20231008 09:35:29.662"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231008 09:35:29.662" endtime="20231008 09:35:29.728"/>
+</kw>
+<status status="PASS" starttime="20231008 09:35:27.528" endtime="20231008 09:35:29.728"/>
+</test>
+<status status="PASS" starttime="20231008 09:35:27.442" endtime="20231008 09:35:29.729"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Check server">Check server</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
